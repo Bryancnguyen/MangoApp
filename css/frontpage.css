@@ -12,12 +12,19 @@ body
     width: 140px;
     text-align: center;
 }
-.MangoIconButton > img
+.MangoIconButton button img
 {
-    display: block;
+        display: block;
     margin: auto;
-    width: 30%;
+    width: 90%;
     
+}
+.MangoIconButton button
+{
+display: block;
+    margin: auto;
+    background-color: transparent;
+    border: none;
 }
 body
 {
