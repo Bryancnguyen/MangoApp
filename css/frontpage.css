@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Raleway';
+  src:  url("/font/Raleway-ExtraLight.ttf") format('.ttf');
+}
+body
+{
+    font-family: Raleway;
+}
+
+.navbar-nav li a
+{
+    width: 140px;
+    text-align: center;
+}
+.MangoIconButton > img
+{
+    display: block;
+    margin: auto;
+    width: 30%;
+    
+}
+body
+{
+    background-color:#2C3E50;
+}
+.MangoTextTitle .jumbotron
+{
+    background-color: #2C3E50;
+    padding: 0px;
+}
+.MangoTextTitle .jumbotron h1
+{
+    text-align: center;
+    color: #E6A546;
+    padding-top: 20px;
+    font-weight: 100;
+}
