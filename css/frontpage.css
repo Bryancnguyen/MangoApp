@@ -1,10 +1,14 @@
 @font-face {
-  font-family: 'Raleway';
-  src:  url("/font/Raleway-ExtraLight.ttf") format('.ttf');
+  font-family: 'Ralewaylight';
+  src:  url("/font/Raleway-Light.ttf") format('.ttf');
 }
-body
-{
-    font-family: Raleway;
+@font-face {
+  font-family: 'Raleway-Thin';
+  src:  url("/font/Raleway-Thin.ttf") format('.ttf');
+}
+@font-face {
+  font-family: 'Raleway-ExtraLight';
+  src:  url("/font/Raleway-ExtraLight.ttf") format('.ttf');
 }
 
 .navbar-nav li a
@@ -14,18 +18,26 @@ body
 }
 .MangoIconButton button img
 {
-        display: block;
     margin: auto;
-    width: 90%;
-    
+    width: 70%;
+   
 }
 .MangoIconButton button
 {
 display: block;
     margin: auto;
     background-color: transparent;
-    border: none;
+     border: 0;
 }
+.MangoIconButton button:hover
+{
+    opacity: 0.75;
+}
+.MangoIconButton button:focus 
+{
+    outline:0;
+}
+
 body
 {
     background-color:#2C3E50;
@@ -40,5 +52,36 @@ body
     text-align: center;
     color: #E6A546;
     padding-top: 20px;
+    font-size: 85px;
+    font-family: Raleway-ExtraLight;
     font-weight: 100;
+    letter-spacing: 4px;
+}
+.Lucky-Button button
+{
+    background-color: mediumseagreen;
+    margin-top: 20px;
+}
+.Lucky-Button button:hover, .Lucky-Button button:active, .Lucky-Button button:focus
+{
+    background-color: lightgreen;
+}
+
+.Think-link
+{
+    font-size: 40px;
+    text-align:center;
+    text-decoration: none;
+    list-style: none;
+}
+.Think-link a
+{
+    color: #fff;
+    font-family: Raleway-Thin;
+}
+.Think-link a:active, .Think-link a:hover, .Think-link a:focus
+{
+    text-decoration: none;
+    opacity: 0.75;
+    color: #E6A546;
 }
