@@ -1,21 +1,44 @@
 /****** FONT FAMILIES ******/
 @font-face {
-  font-family: 'Ralewaylight';
-  src:  url("/font/fonts/v4012/Ralewayv4012-Light.otf") format('.otf');
-  src: url("/font/fonts/v3.000Fontlab/TTF/Raleway-Light.ttf") format('.ttf');
-    font-style: normal;
+  font-family: 'ProximaNova-Regular';
+  src: url(ProximaNovaRegular.eot);
+  src: url(ProximaNovaRegular.eot) format("embedded-opentype"), url(ProximaNovaRegular.woff2) format("woff2"), url(/fonts/ProximaNovaRegular.woff) format("woff"), url(ProximaNovaRegular.ttf) format("truetype"), url(ProximaNovaRegular.svg) format("svg");
+  font-weight: 400;
 }
+
 @font-face {
-  font-family: 'Raleway-Thin';
-  src:  url("/font/fonts/v4012/Ralewayv4012-Thin.otf") format('.otf');
-    src: url("/font/fonts/v3.000Fontlab/TTF/Raleway-Thin.ttf") format('.ttf');
-    font-style: normal;
+  font-family: 'ProximaNova-RegularIt';
+  src: url(ProximaNovaRegularIt.eot);
+  src: url(ProximaNovaRegularIt.eot) format("embedded-opentype"), url(ProximaNovaRegularIt.woff2) format("woff2"), url(/fonts/ProximaNovaRegularIt.woff) format("woff"), url(ProximaNovaRegularIt.ttf) format("truetype"), url(ProximaNovaRegularIt.svg) format("svg");
+  font-weight: 400;
 }
+
 @font-face {
-  font-family: 'Raleway-ExtraLight';
-  src:  url("/font/fonts/v4012/Ralewayv4012-ExtraLight.otf") format('.otf');
-    src: url("/font/fonts/v3.000Fontlab/TTF/Raleway-ExtraLight.ttf") format('.ttf');
-    font-style: normal;
+  font-family: 'ProximaNova-Light';
+  src: url(/css/font/ProximaNovaLight.eot);
+  src: url(/css/font/ProximaNovaLight.eot) format("embedded-opentype"), url(/css/font/ProximaNovaLight.woff2) format("woff2"), url(/css/fonts/ProximaNovaLight.woff) format("woff"), url(/css/font/ProximaNovaLight.ttf) format("truetype"), url(/css/font/ProximaNovaLight.svg) format("svg");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'ProximaNova-LightIt';
+  src: url(ProximaNovaLightIt.eot);
+  src: url(ProximaNovaLightIt.eot) format("embedded-opentype"), url(ProximaNovaLightIt.woff2) format("woff2"), url(/fonts/ProximaNovaLightIt.woff) format("woff"), url(ProximaNovaLightIt.ttf) format("truetype"), url(ProximaNovaLightIt.svg) format("svg");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Semibold';
+  src: url(ProximaNovaSemibold.eot);
+  src: url(ProximaNovaSemibold.eot) format("embedded-opentype"), url(ProximaNovaSemibold.woff2) format("woff2"), url(ProximaNovaSemibold.woff) format("woff"), url(ProximaNovaSemibold.ttf) format("truetype"), url(ProximaNovaSemibold.svg) format("svg");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Medium';
+  src: url(ProximaNovaMedium.eot);
+  src: url(ProximaNovaMedium.eot) format("embedded-opentype"), url(ProximaNovaMedium.woff2) format("woff2"), url(ProximaNovaMedium.woff) format("woff"), url(ProximaNovaMedium.ttf) format("truetype");
+  font-weight: 500;
 }
 /****** HTML ******/
 html
@@ -70,7 +93,7 @@ display: block;
     color: #E6A546;
     padding-top: 20px;
     font-size: 85px;
-    font-family: Raleway-ExtraLight;
+    font-family: ProximaNova-Light;
     font-weight: 100;
     letter-spacing: 4px;
 }
@@ -111,7 +134,7 @@ display: block;
 .Think-link a
 {
     color: #fff;
-    font-family: Raleway-Thin;
+    font-family: ProximaNova-Light;
 }
 .Think-link a:hover
 {
