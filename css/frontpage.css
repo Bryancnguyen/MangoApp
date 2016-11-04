@@ -1,15 +1,21 @@
 /****** FONT FAMILIES ******/
 @font-face {
   font-family: 'Ralewaylight';
-  src:  url("/font/Raleway-Light.ttf") format('.ttf');
+  src:  url("/font/fonts/v4012/Ralewayv4012-Light.otf") format('.otf');
+  src: url("/font/fonts/v3.000Fontlab/TTF/Raleway-Light.ttf") format('.ttf');
+    font-style: normal;
 }
 @font-face {
   font-family: 'Raleway-Thin';
-  src:  url("/font/Raleway-Thin.ttf") format('.ttf');
+  src:  url("/font/fonts/v4012/Ralewayv4012-Thin.otf") format('.otf');
+    src: url("/font/fonts/v3.000Fontlab/TTF/Raleway-Thin.ttf") format('.ttf');
+    font-style: normal;
 }
 @font-face {
   font-family: 'Raleway-ExtraLight';
-  src:  url("/font/Raleway-ExtraLight.ttf") format('.ttf');
+  src:  url("/font/fonts/v4012/Ralewayv4012-ExtraLight.otf") format('.otf');
+    src: url("/font/fonts/v3.000Fontlab/TTF/Raleway-ExtraLight.ttf") format('.ttf');
+    font-style: normal;
 }
 /****** HTML ******/
 html
@@ -73,11 +79,25 @@ display: block;
 .Lucky-Button button
 {
     background-color: mediumseagreen;
+    margin: auto;
+    display: block;
     margin-top: 20px;
+    border-color: green;
 }
 .Lucky-Button button:hover, .Lucky-Button button:active, .Lucky-Button button:focus
 {
-    background-color: lightgreen;
+    background-color: mediumseagreen;
+    border-color: transparent;
+    opacity: 0.75;
+}
+.Lucky-Button a
+{
+    color: palegreen;
+}
+
+.Lucky-Button a:hover
+{
+    text-decoration: none;
 }
 
 /******* MANGO THINK LINK *******/
@@ -92,6 +112,10 @@ display: block;
 {
     color: #fff;
     font-family: Raleway-Thin;
+}
+.Think-link a:hover
+{
+    text-decoration: none;
 }
 .Think-link a:active, .Think-link a:hover, .Think-link a:focus
 {
