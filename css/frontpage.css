@@ -1,3 +1,4 @@
+/****** FONT FAMILIES ******/
 @font-face {
   font-family: 'Ralewaylight';
   src:  url("/font/Raleway-Light.ttf") format('.ttf');
@@ -10,12 +11,20 @@
   font-family: 'Raleway-ExtraLight';
   src:  url("/font/Raleway-ExtraLight.ttf") format('.ttf');
 }
+/****** BODY ******/
+body
+{
+    background-color:#2C3E50;
+}
 
+/****** NAVBAR ******/
 .navbar-nav li a
 {
     width: 140px;
     text-align: center;
 }
+
+/****** MANGO BUTTON *****/
 .MangoIconButton button img
 {
     margin: auto;
@@ -38,10 +47,7 @@ display: block;
     outline:0;
 }
 
-body
-{
-    background-color:#2C3E50;
-}
+/******** MANGO TITLE ********/
 .MangoTextTitle .jumbotron
 {
     background-color: #2C3E50;
@@ -57,6 +63,8 @@ body
     font-weight: 100;
     letter-spacing: 4px;
 }
+
+/******* MANGO I'M FEELING LUCKY ******/
 .Lucky-Button button
 {
     background-color: mediumseagreen;
@@ -67,6 +75,7 @@ body
     background-color: lightgreen;
 }
 
+/******* MANGO THINK LINK *******/
 .Think-link
 {
     font-size: 40px;
