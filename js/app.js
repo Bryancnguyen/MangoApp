@@ -7,10 +7,10 @@ mainApp.controller('mainController', ['$scope', function($scope)
 
 mainApp.config(function($routeProvider) {
   $routeProvider
-  .get("/", {
+  .when("/", {
     templateUrl : "index.html"
   })
-  .get("/slice", {
+  .when("/slice", {
     templateUrl : "slice.html"
   })
   .when("/login", {
