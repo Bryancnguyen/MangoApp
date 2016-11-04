@@ -11,6 +11,11 @@
   font-family: 'Raleway-ExtraLight';
   src:  url("/font/Raleway-ExtraLight.ttf") format('.ttf');
 }
+/****** HTML ******/
+html
+{
+    overflow-x: hidden;
+}
 /****** BODY ******/
 body
 {
@@ -28,7 +33,7 @@ body
 .MangoIconButton button img
 {
     margin: auto;
-    width: 50%;
+    width: 60%;
    
 }
 .MangoIconButton button
