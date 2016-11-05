@@ -57,7 +57,15 @@ body
     width: 140px;
     text-align: center;
 }
-
+.navbar-default
+{
+    background-color: #E6A546;
+    border-color: transparent;
+}
+.navbar-default .navbar-nav>li>a
+{
+    color: white;
+}
 /****** MANGO BUTTON *****/
 .MangoIconButton button img
 {
@@ -144,5 +152,18 @@ display: block;
 {
     text-decoration: none;
     opacity: 0.75;
+    color: #E6A546;
+}
+/******* About Mango *******/
+.About
+{
+    background-color: white;
+    margin-top: 12%;
+}
+.what_title
+{
+    padding-top: 40px;
+    text-align: center;
+    font-family: ProximaNova-Light;
     color: #E6A546;
 }
