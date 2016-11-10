@@ -1,64 +1,65 @@
-<!doctype HTML>
+<!doctype html>
 <html lang="en" ng-app="myApp">
+<!--Header-->
+<head>
+  <meta charset="utf-8">
+  <title>Mango</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/queries.css">
+</head>
 
-    <!--HEADER-->
-    <head>
-        <meta charset="utf-8">
-        <title>Registration</title>
+<!---Body--->
+<body ng-controller="mainController">
+<header>
+     <div class="row">
+         <a href="/index.html">
+          <button class="btn btn-orange btn-border-o">
+          Return Home
+          </button>
+          </a>
+     </div>
+      <div class="row">
+                <h2>Register</h2>
+                  <div class="wrapper">
+    <form class="form-signin">       
+      <h3 class="form-signin-heading">Please Fill Out Your Information</h3>
+      <input type="textbox" class="form-control" name="username" placeholder="Enter Username" required="" autofocus="" />    
+      
+      <input type="textbox" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />     
+      
+      <input type="text" class="form-control" name="password" placeholder="Password" required="" autofocus="" />
+      <input type="password" class="form-control" name="confirm-password" placeholder="Confirm Password" required=""/> 
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>   
+    </form>
+  </div>
+            </div>        
+</header> 
 
-    </head>
+   
+<!---Footer--->
+<footer>
 
-    <!--BODY-->
-    <body ng-controller="registerController">
+</footer>
 
-        <nav class="reg searchbar">
-            <ul class="reg searchbar ">
-                <li><a href="/login.html">Login</a></li>
-                <li><a href="/register.html">Register</a></li>
-            </ul>
-        </nav>
-        <div>
-            <form class="regForms">
-                Email<br>
-                <input type="text" name="userEmail">
-                <br>
-                Username<br>
-                <input type="text" name="username">
-                Password<br>
-                <input type="text" name="password">
-                Confirm Password<br>
-                <input type="text" name="password2"><br>
-                <input type="submit" value="Sign Up">
-            </form>
-        </div>
-        <!--HEY LISTEN this doesnt confirm their credentials-->
-
-
-
-        <!--FOOTER-->
-        <footer>
-
-
-
-
-        </footer>
-
-
-        <!--SCRIPTS
-        <script
-          src="https://code.jquery.com/jquery-3.1.1.min.js"
-          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-          crossorigin="anonymous"></script>
-          <script src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-          
-          
-          
-          
-          <script src="js/app.js"></script>-->
-
-    </body>
-
+<!----Scripts--->
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/app.js"></script>
+</body>
 
 </html>
