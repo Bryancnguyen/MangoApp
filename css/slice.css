@@ -186,33 +186,6 @@ nav.sidebar ul li.active a.expandable:hover {
 }
 
 
-.main-slice 
-{
-  background: -webkit-linear-gradient(left, #1e5799 0%, #2ce0bf 19%, #76dd2c 40%, #dba62b 60%, #e02cbf 83%, #1e5799 100%);
-  background: linear-gradient(to right, #1e5799 0%, #2ce0bf 19%, #76dd2c 40%, #dba62b 60%, #e02cbf 83%, #1e5799 100%);
-  background-size: 10000px 100%;
-  -webkit-animation: bg 15s linear infinite;
-  animation: bg 15s linear infinite;
-}
-
-@-webkit-keyframes bg {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 10000px;
-  }
-}
-
-@keyframes bg {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 10000px;
-  }
-}
-
 /* -- import Roboto Font ---------------------------- */
 @import "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";
 /* -- import Material Icons Font -------------------- */
