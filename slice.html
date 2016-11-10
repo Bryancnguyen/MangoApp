@@ -12,55 +12,214 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/slice.css">
     <link rel="stylesheet" href="/css/queries.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 
 <!---Body--->
- <script type="text/javascript" src="//code.jquery.com/jquery-1.10.1.js"></script>
 <body>
-   <aside>
-    <nav class="sidebar sidebar-menu-collapsed">
-  <a href="#" id="justify-icon">
-    <span class="glyphicon glyphicon-align-justify"></span>
-  </a>
-  <ul>
-    <li class="active">
-      <a class="expandable" href="/index.html" title="Home">
-        <span class="glyphicon glyphicon-home collapsed-element"></span>
-        <span class="expanded-element">Home</span>
-      </a>
-    </li>
-    <li>
-      <a class="expandable" href="#" title="APIs">
-        <span class="glyphicon glyphicon-wrench collapsed-element"></span>
-        <span class="expanded-element">APIs</span>
-      </a>
-    </li>
-    <li>
-      <a class="expandable" href="#" title="Settings">
-        <span class="glyphicon glyphicon-cog collapsed-element"></span>
-        <span class="expanded-element">Settings</span>
-      </a>
-    </li>
-    <li>
-      <a class="expandable" href="#" title="Account">
-        <span class="glyphicon glyphicon-user collapsed-element"></span>
-        <span class="expanded-element">Account</span>
-      </a>
-    </li>
-  </ul>
-  <ul>
-  <li>
-  <a class="expandable" href="#" id="logout-icon" title="Logout">
-    <span class="glyphicon glyphicon-off collapsed-element"></span>
-    <span class="expanded-element">Logout</span>
-  </a>
-  </li>
-  </ul>
-</nav>
+  <!-- Overlay for fixed sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-default open" role="navigation">
+    <!-- Sidebar header -->
+    <div class="sidebar-header header-cover" style="background-image: url(/img/hero.jpg);">
+        <!-- Top bar -->
+        <div class="top-bar"></div>
+        <!-- Sidebar toggle button -->
+        <button type="button" class="sidebar-toggle">
+            <i class="material-icons">keyboard_arrow_left</i>
+        </button>
+        <!-- Sidebar brand image -->
+        <div class="sidebar-image">
+            <img src="/img/bryan.jpg">
+        </div>
+        <!-- Sidebar brand name -->
+        <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+            Bryan Nguyen 
+        </a>
+    </div>
+
+    <!-- Sidebar navigation -->
+    <ul class="nav sidebar-nav">
+        <li class="dropdown">
+            <ul id="settings-dropdown" class="dropdown-menu">
+                <li>
+                    <a href="#" tabindex="-1">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="#" tabindex="-1">
+                        Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="#" tabindex="-1">
+                        Help
+                    </a>
+                </li>
+                <li>
+                    <a href="#" tabindex="-1">
+                        Exit
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="/index.html">
+                <i class="sidebar-icon material-icons">home</i>
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon material-icons">lightbulb_outline</i>
+                <span>Slices</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon material-icons">near_me</i>
+                <span>Location</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon material-icons">&#xE56C;</i>
+                <span>Resturants</span>
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li class="dropdown">
+            <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">
+                MORE OPTIONS HERE
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#" tabindex="-1">
+                        HIDDEN OPTION
+                        <span class="sidebar-badge">12</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" tabindex="-1">
+                        HIDDEN OPTION
+                        <span class="sidebar-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                PAST SLICES
+                <span class="sidebar-badge">3</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                TRASHED SLICES
+                <span class="sidebar-badge">456</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                SLICES REVIEWED
+                <span class="sidebar-badge badge-circle">i</span>
+            </a>
+        </li>
+    </ul>
+    <!-- Sidebar divider -->
+    <!-- <div class="sidebar-divider"></div> -->
+    
+    <!-- Sidebar text -->
+    <!--  <div class="sidebar-text">Text</div> -->
 </aside>
-<section class="main-slice">
-<h1>MANGO!</h1>
-</section>
+
+<div class="wrapper">
+    <!-- Sidebar Constructor -->
+    <div class="constructor">
+        <h2 class="headline">HERE IS YOUR SLICE</h2>
+        
+        <h3 style="text-align:center;">How about CLUBBING?</h3>
+        <div class="row">
+        <div class="col span-1-of-1 slice-image">
+                    <img src="/img/clubbing.jpg">
+        </div>
+        <div class="take-me-button">
+        <a href="/location.html" class="btn btn-orange btn-border-o">
+         
+          Take Me
+        </a>
+        </div>
+        </div>
+        <hr />
+        <p>HERE WE WILL DISPLAY A SLICE WITH THE IMAGE <a href="#" target="_blank">HERE"S THE STUFF</a> WOOOOOOOOOO!</p>
+        <p>BUNCH OF RANDOM TEXT!!!!</p>
+        <hr />
+        <h2 class="headline">Reviews</h2>
+        <div class="reviews">
+  <!-- Panel one -->
+  <div class="panel">
+    <img src="http://www.designbolts.com/wp-content/uploads/2014/01/Superman-Flat-Design.png">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+    <h7>Superman</h7>
+  </div>
+  <!-- Panel Two -->
+  <div class="panel">
+    <img src="http://www.designbolts.com/wp-content/uploads/2014/01/Batman-Flat-Design.png">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+    <h7>Batman</h7>
+  </div>
+  <!-- Panel Three -->
+  <div class="panel">
+    <img src="http://www.designbolts.com/wp-content/uploads/2014/01/Liz-Sherman-Flat-Design.png">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+    <h7>Liz Sherman</h7>
+  </div>
+</div>
+<script>
+  speed = 600
+</script>
+              
+        <h2 class="headline">Sidebar Constructor</h2>
+        <p>
+            <label for="sidebar-position">Sidebar postion</label>
+            <select id="sidebar-position" name="sidebar-position">
+                <option value="">Default</option>
+                <option value="sidebar-fixed-left">Float on left</option>
+                <option value="sidebar-fixed-right">Float on right</option>
+                <option value="sidebar-stacked">Stacked on left</option>
+            </select>
+        </p>
+        <p>
+            <label for="sidebar-theme">Sidebar theme</label>
+            <select id="sidebar-theme" name="sidebar-theme">
+                <option value="sidebar-default">Default</option>
+                <option value="sidebar-inverse">Inverse</option>
+                <option value="sidebar-colored">Colored</option>
+                <option value="sidebar-colored-inverse">Colored-Inverse</option>
+            </select>
+        </p>
+        <p>
+            <label for="sidebar-header">Sidebar header cover</label>
+            <select id="sidebar-header" name="sidebar-header">
+                <option value="header-cover">Image cover</option>
+                <option value="">Color cover</option>
+            </select>
+        </p>
+        <p><button class="sidebar-toggle">Toggle sidebar</button></p>
+    </div>
+</div>
+
 <!---Footer--->
 <footer>
 
@@ -76,7 +235,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
   
-  <script src="/js/nav.js"></script>
+  <script src="/js/review.js"></script>
+  <script src="/js/sidebar.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/app.js"></script>
