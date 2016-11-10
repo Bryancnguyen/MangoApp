@@ -146,11 +146,10 @@
         <h3 style="text-align:center;">How about CLUBBING?</h3>
         <div class="row">
         <div class="col span-1-of-1 slice-image">
-                    <img src="/img/clubbing.jpg">
+                    <img id="theImage" src="/img/clubbing.jpg" onclick="pictureChange()">
         </div>
         <div class="take-me-button">
-        <a href="/location.html" class="btn btn-orange btn-border-o">
-         
+        <a class="btn btn-orange btn-border-o" onclick="pictureChange()">
           Take Me
         </a>
         </div>
@@ -235,6 +234,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
   
+  <script src="/js/location.js"></script>
   <script src="/js/review.js"></script>
   <script src="/js/sidebar.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
