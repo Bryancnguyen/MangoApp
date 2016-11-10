@@ -349,7 +349,9 @@ display: block;
     background-attachment: fixed;
 }
 
-
+blockquote {
+    padding: 10px 15px;
+}
 
 cite {
     font-size: 90%;
