@@ -90,6 +90,13 @@ h3 {
     font-weight: 300;
     text-transform: uppercase;
 }
+.description-title h3
+{
+   text-align:center; 
+    color:#E6A546 ;
+   text-transform: none;
+   text-shadow: 1px 1px 5px #e67e22;
+}
 
 h1 {
     margin-top: 0;
@@ -184,7 +191,7 @@ header {
 .MangoIconButton button img
 {
     margin: auto;
-    width: 50%;
+    width: 60%;
    
 }
 .MangoIconButton button
@@ -213,7 +220,7 @@ display: block;
 {
     text-align: center;
     color: #E6A546;
-    padding-top: 20px;
+    padding-top: 40px;
     font-size: 85px;
     /*font-family: ProximaNova-Light;*/
     font-weight: 100;
