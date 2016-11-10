@@ -288,14 +288,38 @@ display: block;
     text-align: center;
 }
 
-/******* How to Use Section *******/
-.section-steps
-{
-        background-color: #f4f4f4;
+.section-steps {
+    background-color: #f4f4f4;
 }
+
+.steps-box {
+    margin-top: 30px;
+}
+
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+}
+
+.steps-box:last-child {
+    text-align: left;
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
 .works-step {
     margin-bottom: 50px;
 }
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
 .works-step div {
     color: #e67e22;
     font-size: 150%;
@@ -309,20 +333,35 @@ display: block;
     float: left;
     padding: 5px;
 }
-.clearfix {
-    zoom: 1;
+
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
 }
-.steps-box:first-child {
-    text-align: right;
-    padding-right: 3%;
+
+
+/*** DEV SECTION ***/
+.section-testimonials {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
 }
-.steps-box:last-child {
-    /* text-align: left; */
-    padding-left: 3%;
-    margin-top: 70px;
+
+
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
 }
-.app-screen {
-    width: 40%;
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 
