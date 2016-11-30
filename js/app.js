@@ -11,19 +11,19 @@ mainApp.config(function($routeProvider) {
     templateUrl : "index.html"
   })
   .when("/slice", {
-    templateUrl : "slice.html"
+    templateUrl : "/pages/slice.html"
   })
   .when("/login", {
-    templateUrl : "login.html"
+    templateUrl : "/pages/login.html"
   })
   .when("/register", {
-    templateUrl : "register.html"
+    templateUrl : "/pages/register.html"
   })
     .when("/lucky", {
-    templateUrl : "lucky.html"
+    templateUrl : "/pages/lucky.html"
   })
     .when("/404",
     {
-        templateUrl: "404.html"
+        templateUrl: "/pages/404.html"
     });
 });

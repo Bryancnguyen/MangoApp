@@ -324,14 +324,12 @@ display: block;
   border-radius: 3px;
   position: relative;
   margin: 8% auto auto auto;
-  width: 650px;
   padding: 40px 50px;
   display: table;
   background-color: #eda15e;
 }
 .quote-box .quote-text {
   text-align: center;
-  width: 650px;
   height: auto;
   clear: both;
   font-weight: 500;
@@ -342,7 +340,7 @@ display: block;
   margin-right: 0.4em;
 }
 .quote-box .quote-author {
-  width: 650px;
+
   height: auto;
   clear: both;
   padding-top: 20px;
