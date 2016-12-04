@@ -20,7 +20,7 @@
       <div class="row">
                 <h2>Register</h2>
                   <div class="wrapper">
-    <form class="form-signin">       
+    <form class="form-signin" method="post" action="http://localhost:8080/MangoApp/db_insert_mangoapp_user.jsp">       
       <h3 class="form-signin-heading">Please Fill Out Your Information</h3>
       <input type="textbox" class="form-control" name="username" placeholder="Enter Username" required="" autofocus="" />    
       
@@ -38,13 +38,16 @@
           </a>
      </div>
   </div>  
-</div>             
+</div> 
 </header> 
 
    
 <!---Footer--->
 <footer>
-
+<!--
+Debug:<br/>
+<a href="http://localhost:8080/MangoApp/db_select_mangoapp_users.jsp">db_select_mangoapp_users.jsp</a>           
+-->
 </footer>
 
 <!----Scripts--->
