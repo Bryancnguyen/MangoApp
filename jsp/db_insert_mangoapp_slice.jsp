@@ -21,7 +21,7 @@ Showing:<br/>
 </small>
 
 <sql:update dataSource="${snapshot}" var="result">
-INSERT INTO Users VALUES ( NULL, '<%= request.getParameter("username")%>', '<%= request.getParameter("password")%>', '<%= request.getParameter("email")%>', '2016-12-03', NULL );
+INSERT INTO Slices VALUES ( NULL, '<%= request.getParameter("location")%>', NULL, NULL, NULL );
 </sql:update>
  
 <sql:query dataSource="${snapshot}" var="result">
@@ -30,22 +30,24 @@ SELECT * from Users;
  
 <table border="1" width="100%">
 <tr>
-   <th>idUsers</th>
-   <th>Username</th>
-   <th>Email</th>
-   <th>Date</th>
+   <th>idSlices</th>
+   <th>Location</th>
+   <th>Tourist</th>
+   <th>primary_criteria</th>
+   <th>secondary_criteria</th>
 </tr>
 <c:forEach var="row" items="${result.rows}">
 <tr>
-   <td><c:out value="${row.idUsers}"/></td>
-   <td><c:out value="${row.Username}"/></td>
-   <td><c:out value="${row.Email}"/></td>
-   <td><c:out value="${row.Date}"/></td>
+   <td><c:out value="${row.idSlices}"/></td>
+   <td><c:out value="${row.Location}"/></td>
+   <td><c:out value="${row.Tourist}"/></td>
+   <td><c:out value="${row.primary_criteria}"/></td>
+   <td><c:out value="${row.secondary_criteria}"/></td>
 </tr>
 </c:forEach>
 </table>
 <script>
-window.location.href = "http://"+window.location.hostname+":80/MangoApp-gh-pages/index.html";
+window.location.href = "http://"+window.location.hostname+":80/MangoApp-gh-pages/pages/slice.html";
 </script>
 </body>
 </html>

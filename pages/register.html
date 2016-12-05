@@ -20,7 +20,7 @@
       <div class="row">
                 <h2>Register</h2>
                   <div class="wrapper">
-    <form class="form-signin" method="post" action="http://localhost:8080/MangoApp/db_insert_mangoapp_user.jsp">       
+    <form class="form-signin" method="post" action="http://localhost:8080/MangoApp/db_insert_mangoapp_user.jsp" id="modify-me">       
       <h3 class="form-signin-heading">Please Fill Out Your Information</h3>
       <input type="textbox" class="form-control" name="username" placeholder="Enter Username" required="" autofocus="" />    
       
@@ -63,6 +63,14 @@ Debug:<br/>
   <script src="../js/jquery.waypoints.min.js"></script>
   <script src="../js/script.js"></script>
   <script src="../js/app.js"></script>
+<script>
+// The jsp run on a different port
+// when we post the form, we change the port but we keep the rest of the url
+// since we cannot change the port of a relative url, let's reconstruct it from scratch
+var strurl=window.location.protocol + "//" + window.location.hostname + ":8080/MangoApp/db_insert_mangoapp_user.jsp";
+//alert(strurl);
+document.getElementById('modify-me').action = strurl;
+</script>                      
 </body>
 
 </html>
