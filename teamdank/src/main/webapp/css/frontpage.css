@@ -51,7 +51,7 @@ h3 {
 }
 .description-title h3
 {
-   text-align:center; 
+   text-align:center;
     color:#E6A546 ;
    text-transform: none;
    text-shadow: 1px 1px 5px #e67e22;
@@ -152,7 +152,7 @@ header {
 {
     margin: auto;
     width: 60%;
-   
+
 }
 .MangoIconButton button
 {
@@ -165,7 +165,7 @@ display: block;
 {
     opacity: 0.75;
 }
-.MangoIconButton button:focus 
+.MangoIconButton button:focus
 {
     outline:0;
 }
@@ -192,7 +192,7 @@ display: block;
 {
     background-color: mediumseagreen;
     margin: auto;
-    
+
     margin-top: 20px;
     border-color: green;
 }
@@ -239,7 +239,7 @@ display: block;
 /******* About Mango *******/
 .About
 {
-    background-color: white;
+    background-color: #f4f4f4;
 }
 .what_title
 {
@@ -248,8 +248,8 @@ display: block;
     /*font-family: ProximaNova-Light;*/
     color: #E6A546;
 }
-.icon-big {
-    font-size: 350%;
+.material-icons {
+    font-size: 350% !important;
     display: block;
     color: #e67e22;
     margin-bottom: 10px;
@@ -407,7 +407,6 @@ display: block;
 /*** DEV SECTION ***/
 .section-testimonials {
     background-size: cover;
-    color: #fff;
     background-attachment: fixed;
 }
 
@@ -611,7 +610,7 @@ footer {
 }
 
 .footer-nav li a:link,
-.footer-nav li a:visited, 
+.footer-nav li a:visited,
 .social-links li a:link,
 .social-links li a:visited {
     text-decoration: none;
