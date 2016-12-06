@@ -1,29 +1,43 @@
-var mainApp = angular.module('myApp', ['ngRoute']);
+(function () {
+    'use strict';
 
-mainApp.controller('mainController', ['$scope', function($scope)
-{
-    $scope.name = 'YAY';
-}]);
+    angular
+        .module('myApp', ['ngRoute', 'ngCookies'])
+        .config(config)
+        .run(run);
 
-mainApp.config(function($routeProvider) {
-  $routeProvider
-  .when("/", {
-    templateUrl : "index.html"
-  })
-  .when("/slice", {
-    templateUrl : "/pages/slice.html"
-  })
-  .when("/login", {
-    templateUrl : "/pages/login.html"
-  })
-  .when("/register", {
-    templateUrl : "/pages/register.html"
-  })
-    .when("/lucky", {
-    templateUrl : "/pages/lucky.html"
-  })
-    .when("/404",
-    {
-        templateUrl: "/pages/404.html"
-    });
-});
+    config.$inject = ['$routeProvider', '$locationProvider'];
+    function config($routeProvider, $locationProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: '/pages/home.view.html',
+                controllerAs: 'vm'
+            })
+
+            .when('/login', {
+                controller: 'LoginController',
+                templateUrl: '/pages/login.view.html',
+                controllerAs: 'vm'
+            })
+
+            .when('/register', {
+                controller: 'RegisterController',
+                templateUrl: '/pages/register.view.html',
+                controllerAs: 'vm'
+            })
+
+            .otherwise({ redirectTo: '/pages/home.view.html' });
+    }
+
+    run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];
+    function run($rootScope, $location, $cookieStore, $http) {
+        // keep user logged in after page refresh
+        $rootScope.globals = $cookieStore.get('globals') || {};
+        if ($rootScope.globals.currentUser) {
+            $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
+        }
+
+
+    }
+
+})();
