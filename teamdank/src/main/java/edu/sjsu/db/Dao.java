@@ -7,19 +7,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Dao {
-	public static Connection getConn() 
+	public static Connection getConn()
 	{
 		String driverStr = "com.mysql.jdbc.Driver";
-		String urlStr = "jdbc:mysql://localhost:3306/cs160test"; String uid = "root";
+		String urlStr = "jdbc:mysql://localhost:3306/mydb"; String uid = "root";
 		String pwd = "teamdank160";
 		try {
 		Class.forName(driverStr);
 		return DriverManager.getConnection(urlStr, uid, pwd);
-		} 
+		}
 		catch (SQLException | ClassNotFoundException ex) { System.err.println("The connection failed because " + ex.getMessage()); ex.printStackTrace();
 		return null;
 		}
 	} // method
+
 	public static String getPhone(String name) throws SQLException { String output = "{\"phone\" : ";
 	Connection conn = getConn();
 	if (conn == null) return output + "\"connection failed\"}";
@@ -34,4 +35,5 @@ public class Dao {
 	output += "\"" + rs.getString(2) + "\"";
 	}
 	return output + "}"; } // method
+
 }
