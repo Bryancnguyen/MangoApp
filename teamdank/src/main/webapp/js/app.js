@@ -36,6 +36,9 @@
                 templateUrl: './pages/slice.html',
                 controllerAs: 'vm'
             })
+            .when('/pastslice',{
+            templateUrl:'/#/pastslice'
+        })
 
 
             .otherwise({ redirectTo: '/pages/home.view.html' });
