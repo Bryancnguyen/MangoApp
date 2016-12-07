@@ -1,0 +1,16 @@
+
+
+<div class="col-md-6 col-md-offset-3">
+<h2>Hi {{vm.user.firstName}}!</h2>
+<p>You're logged in!!</p>
+<h3>All registered users:</h3>
+<ul>
+    <li ng-repeat="user in vm.allUsers">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a href="#/" ng-click="vm.deleteUser(user.id)">Delete</a>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<a href="#/login" class="btn btn-primary">Logout</a>
+<a href="#/slice" class="btn btn-primary">Slice Page</a>
+</div>
