@@ -10,21 +10,33 @@
     function config($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: '/pages/home.view.html',
+                templateUrl: './pages/home.view.html',
                 controllerAs: 'vm'
             })
 
             .when('/login', {
                 controller: 'LoginController',
-                templateUrl: '/pages/login.view.html',
+                templateUrl: './pages/login.view.html',
                 controllerAs: 'vm'
             })
 
             .when('/register', {
                 controller: 'RegisterController',
-                templateUrl: '/pages/register.view.html',
+                templateUrl: './pages/register.view.html',
                 controllerAs: 'vm'
             })
+
+            .when('/signedin', {
+                controller: 'HomeController',
+                templateUrl: './pages/signedin.view.html',
+                controllerAs: 'vm'
+            })
+            .when('/slice', {
+                controller: 'HomeController',
+                templateUrl: './pages/slice.html',
+                controllerAs: 'vm'
+            })
+
 
             .otherwise({ redirectTo: '/pages/home.view.html' });
     }
