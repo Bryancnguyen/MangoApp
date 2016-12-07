@@ -37,7 +37,7 @@
         </div>
         <!-- Sidebar brand name -->
         <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-            Bryan Nguyen
+            {{vm.user.firstName}}
         </a>
     </div>
 
@@ -68,7 +68,7 @@
             </ul>
         </li>
         <li>
-            <a href="./../index.html">
+            <a href="#/">
                 <i class="sidebar-icon material-icons">home</i>
                 <span>Home</span>
             </a>
@@ -211,6 +211,12 @@
   <script src="./../js/review.js"></script>
   <script src="./../js/sidebar.js"></script>
   <script src="./../js/app.js"></script>
+  <script src="./../app-services/authentication.service.js"></script>
+  <script src="./../app-services/user.service.local-storage.js"></script>
+  <script src="./../app-services/flash.service.js"></script>
+  <script src="./../js/home.controller.js"></script>
+  <script src="./../js/login.controller.js"></script>
+  <script src="./../js/register.controller.js"></script>
 </body>
 
 </html>
