@@ -18,7 +18,9 @@ body {
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
-
+body{
+display: block !important;
+}
 .clearfix {zoom: 1;}
 .clearfix:after {
     content: '.';
@@ -101,10 +103,10 @@ h2:after {
 @import "bourbon";
 
 body {
-	background: #eee !important;	
+	background: #eee !important;
 }
 
-.wrapper {	
+.wrapper {
 	margin-top: 80px;
   margin-bottom: 80px;
 }
@@ -114,7 +116,7 @@ body {
   padding: 15px 35px 45px;
   margin: 0 auto;
   background-color: #fff;
-  border: 1px solid rgba(0,0,0,0.1);  
+  border: 1px solid rgba(0,0,0,0.1);
 }
   .form-signin-heading,
 	.checkbox {
