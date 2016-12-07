@@ -39,9 +39,12 @@
             .when('/pastslice',{
             templateUrl:'./pages/pastslice.html'
             })
-
-
-            .otherwise({ redirectTo: '/pages/home.view.html' });
+            .otherwise({
+           controller : function(){
+           window.location.replace('/404.html');
+                },
+        templateUrl : './404.html'
+               });
     }
 
     run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];
