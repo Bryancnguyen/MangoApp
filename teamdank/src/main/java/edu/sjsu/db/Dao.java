@@ -10,7 +10,8 @@ public class Dao {
 	public static Connection getConn()
 	{
 		String driverStr = "com.mysql.jdbc.Driver";
-		String urlStr = "jdbc:mysql://localhost:3306/mydb"; String uid = "root";
+		String urlStr = "jdbc:mysql://localhost:3306/cs160test";
+		String uid = "root";
 		String pwd = "teamdank160";
 		try {
 		Class.forName(driverStr);

@@ -32,7 +32,7 @@
                 controllerAs: 'vm'
             })
             .when('/slice', {
-                controller: 'HomeController',
+                controller: 'SliceController',
                 templateUrl: './pages/slice.html',
                 controllerAs: 'vm'
             })
