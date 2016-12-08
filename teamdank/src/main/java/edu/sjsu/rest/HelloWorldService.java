@@ -16,6 +16,8 @@ public Response getMsg(@PathParam("param") String msg)
     String output = "Hello " + msg;
 return Response.status(200).entity(output).build();
 } //method
+
+
 @GET
 @Path("/phone/{param}")
 public Response getPhone(@PathParam("param") String name) {
@@ -26,4 +28,17 @@ e.printStackTrace();
 output += "{\"phone\" : \"Name not found!\"}";
   }
 return Response.status(200).entity(output).build(); } //method
-} //class
+
+@GET
+@Path("/slice")
+public Response getSlice()
+{
+  String output = "";
+  try {
+  output = Dao.getSlice(1);
+} catch (SQLException e) {
+  e.printStackTrace();
+  output += "NO SLICES FOUND!!!";
+    }
+  return Response.status(200).entity(output).build(); } //method
+  } //class//class

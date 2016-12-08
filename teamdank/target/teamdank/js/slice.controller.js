@@ -40,17 +40,32 @@ function SliceController(UserService, $rootScope, $scope, $http) {
       });
   }
 
-var serviceUrl = 'http://localhost:8080/teamdank/rest/hello/phone/';
-$scope.search = function() {
-var request = { method: 'GET',
-url: serviceUrl + $scope.name };
-$http(request).then(
-function successCallback(response) { //success
-$scope.phone = response.data.phone;
-vm.phone = $scope.phone},
-function errorCallback(response) { //error $scope.phone = 'An unknow problem happened.';
-           });
-     } //search
+  var serviceUrl = 'http://localhost:8080/teamdank/rest/hello/phone/';
+  $scope.search = function() {
+  var request = { method: 'GET',
+  url: serviceUrl + $scope.name };
+  $http(request).then(
+  function successCallback(response) { //success
+  $scope.phone = response.data.phone;
+  vm.phone = $scope.phone;},
+  function errorCallback(response) { //error $scope.phone = 'An unknow problem happened.';
+             });
+       } //search
+var sliceUrl = 'http://localhost:8080/teamdank/rest/slice/';
+     $scope.callSlice = function() {
+     var request =
+     { method: 'GET',
+     url: sliceUrl 
+     };
+     $http(request).then(
+     function successCallback(response) { //success
+     vm.slice = response.data;
+     console.log(vm.slice)
+     },
+     function errorCallback(response) { //error $scope.phone = 'An unknow problem happened.';
+                });
+          } //search //PhoneCont
 } //PhoneCont
+
 
 })();
