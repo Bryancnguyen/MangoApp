@@ -20,6 +20,112 @@
 
 <!---Body--->
 <body>
+  <div class="sidebar-overlay"></div>
+
+  <!-- Material sidebar -->
+  <aside id="sidebar" class="sidebar sidebar-default open" role="navigation">
+      <!-- Sidebar header -->
+      <div class="sidebar-header header-cover" style="background-image: url(./../img/hero.jpg);">
+          <!-- Top bar -->
+          <div class="top-bar"></div>
+          <!-- Sidebar toggle button -->
+          <button type="button" class="sidebar-toggle">
+              <i class="material-icons">keyboard_arrow_left</i>
+          </button>
+          <!-- Sidebar brand image -->
+          <div ng-if="!vm.user.firstName" class="sidebar-image">
+              <img src="./../img/bryan.jpg">
+          </div>
+          <div class="sidebar-image" ng-if="vm.user.firstName">
+            <img src="./../img/bryan.jpg">
+          </div>
+          <!-- Sidebar brand name -->
+
+          <a data-toggle="dropdown" class="sidebar-brand" href="#/login">
+            <div ng-if="vm.user.firstName">{{vm.user.firstName}}</div>
+            <div>Please Login!</div>
+          </a>
+
+        </div>
+
+      <!-- Sidebar navigation -->
+      <ul class="nav sidebar-nav">
+          <li class="dropdown">
+              <ul id="settings-dropdown" class="dropdown-menu">
+                  <li>
+                      <a href="#" tabindex="-1">
+                          Profile
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" tabindex="-1">
+                          Settings
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" tabindex="-1">
+                          Help
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" tabindex="-1">
+                          Exit
+                      </a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a href="#/">
+                  <i class="sidebar-icon material-icons">home</i>
+                  <span>Home</span>
+              </a>
+          </li>
+          <li>
+              <a href="./../pages/suggest.html">
+                  <i class="sidebar-icon material-icons">lightbulb_outline</i>
+                  <span>Give a Slice</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <i class="sidebar-icon material-icons">near_me</i>
+                  <span>Location</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <i class="sidebar-icon material-icons">&#xE56C;</i>
+                  <span>Resturants</span>
+              </a>
+          </li>
+          <li class="divider"></li>
+
+          <li>
+              <a href="#/pastslice">
+                  PAST SLICES
+                  <span class="sidebar-badge">3</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  TRASHED SLICES
+                  <span class="sidebar-badge">456</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  SLICES REVIEWED
+                  <span class="sidebar-badge badge-circle">i</span>
+              </a>
+          </li>
+      </ul>
+      <!-- Sidebar divider -->
+      <!-- <div class="sidebar-divider"></div> -->
+
+      <!-- Sidebar text -->
+      <!--  <div class="sidebar-text">Text</div> -->
+  </aside>
+  <div class="wrapperclass">
   <div class="default-screen ionic-body">
     <div class="content-wrapper">
       <div class="padding"></div>
@@ -50,8 +156,6 @@
       consists of tabs, icons aligned left, within the card-footer.
     </p>
     <p>
-      <a href="#" class="subdued">1 Like</a>
-      <a href="#" class="subdued">5 Comments</a>
       <a ng-click="showDetails = ! showDetails">Show Reviews</a>
         </p>
     <div ng-hide="showme"></div>
@@ -97,7 +201,7 @@ speed = 600
   <div class="title">MANGO</div>
   <button class="button button-clear">New Slice</button>
 </div>
-
+</div>
     </div>
 </div>
 <script src="./ionic-v1.3.2/js/ionic.min.js"></script>

@@ -28,6 +28,19 @@ body {
     visibility: hidden;
 }
 
+.headerinfo
+{
+  display: none;
+}
+.list:last-child.card
+{
+  margin-bottom: 100% !important;
+}
+.padding
+{
+  padding: 0px !important;
+}
+
 /* ----------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ----------------------------------------------- */
@@ -677,8 +690,9 @@ body {
     width: 450px;
     border-radius: 5px;
     border: 5px solid #ddd;
-    margin-top: 60px;
 
+    margin: 50px auto;
+     display: block;
 }
 .slice-image img:hover
 {
@@ -724,7 +738,8 @@ png images background
 /*== Removal End==*/
 
 .panel p {
-  width : 420px;
+  width: 100%;
+
   clear : right ;
   text-align : justify ;
   margin : 25px 0 10px 0;
