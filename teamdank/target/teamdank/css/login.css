@@ -18,9 +18,12 @@ body {
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
-body{
-display: block !important;
+
+body
+{
+  display: block !important
 }
+
 .clearfix {zoom: 1;}
 .clearfix:after {
     content: '.';

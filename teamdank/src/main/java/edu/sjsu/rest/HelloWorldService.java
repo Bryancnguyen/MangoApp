@@ -7,7 +7,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
 import edu.sjsu.db.Dao;
-@Path("/suggest")
+@Path("/hello")
 public class HelloWorldService {
 @GET
 @Path("/{param}")
@@ -16,6 +16,8 @@ public Response getMsg(@PathParam("param") String msg)
     String output = "Hello " + msg;
 return Response.status(200).entity(output).build();
 } //method
+
+
 @GET
 @Path("/phone/{param}")
 public Response getPhone(@PathParam("param") String name) {
@@ -26,4 +28,17 @@ e.printStackTrace();
 output += "{\"phone\" : \"Name not found!\"}";
   }
 return Response.status(200).entity(output).build(); } //method
-} //class
+
+@GET
+@Path("/slice")
+public Response getSlice()
+{
+  String output = "";
+  try {
+  output = Dao.getSlice();
+} catch (SQLException e) {
+  e.printStackTrace();
+  output += "{\"slice\" : \"No Slices Found!\"}";
+    }
+  return Response.status(200).entity(output).build(); } //method
+  } //class//class

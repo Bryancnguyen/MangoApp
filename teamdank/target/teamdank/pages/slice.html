@@ -5,190 +5,203 @@
   <meta charset="utf-8">
   <title>Mango</title>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="./../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./../css/normalize.css">
-  <link rel="stylesheet" href="./../css/grid.css">
-    <link rel="stylesheet" href="./../css/ionicons.min.css">
-  <link rel="stylesheet" href="./../css/main.css">
-  <link rel="stylesheet" href="./../css/slice.css">
-    <link rel="stylesheet" href="./../css/queries.css">
+  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/slice.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="ionic-v1.3.2/css/ionic.min.css">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 </head>
 
 <!---Body--->
 <body>
-  <!-- Overlay for fixed sidebar -->
-<div class="sidebar-overlay"></div>
+  <div class="sidebar-overlay"></div>
 
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-default open" role="navigation">
-    <!-- Sidebar header -->
-    <div class="sidebar-header header-cover" style="background-image: url(./../img/hero.jpg);">
-        <!-- Top bar -->
-        <div class="top-bar"></div>
-        <!-- Sidebar toggle button -->
-        <button type="button" class="sidebar-toggle">
-            <i class="material-icons">keyboard_arrow_left</i>
-        </button>
-        <!-- Sidebar brand image -->
-        <div class="sidebar-image">
-            <img src="./../img/bryan.jpg">
+  <!-- Material sidebar -->
+  <aside id="sidebar" class="sidebar sidebar-default open" role="navigation">
+      <!-- Sidebar header -->
+      <div class="sidebar-header header-cover" style="background-image: url(img/hero.jpg);">
+          <!-- Top bar -->
+          <div class="top-bar"></div>
+          <!-- Sidebar toggle button -->
+          <button type="button" class="sidebar-toggle">
+              <i class="material-icons">keyboard_arrow_left</i>
+          </button>
+          <!-- Sidebar brand image -->
+          <div ng-if="!vm.user.firstName" class="sidebar-image">
+              <img src="img/bryan.jpg">
+          </div>
+          <div class="sidebar-image" ng-if="vm.user.firstName">
+            <img src="img/bryan.jpg">
+          </div>
+          <!-- Sidebar brand name -->
+
+          <a data-toggle="dropdown" class="sidebar-brand" href="#/login">
+            <div ng-if="vm.user.firstName">{{vm.user.firstName}}</div>
+            <div>Please Login!</div>
+          </a>
+
         </div>
-        <!-- Sidebar brand name -->
-        <div ng-show="{{vm.user !== 'undefined'}}">
-        <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-            {{vm.user.firstName}}
-        </a>
-      </div>
+
+      <!-- Sidebar navigation -->
+      <ul class="nav sidebar-nav">
+          <li class="dropdown">
+              <ul id="settings-dropdown" class="dropdown-menu">
+                  <li>
+                      <a href="#" tabindex="-1">
+                          Profile
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" tabindex="-1">
+                          Settings
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" tabindex="-1">
+                          Help
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" tabindex="-1">
+                          Exit
+                      </a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a href="#/">
+                  <i class="sidebar-icon material-icons">home</i>
+                  <span>Home</span>
+              </a>
+          </li>
+          <li>
+              <a href="pages/suggest.html">
+                  <i class="sidebar-icon material-icons">lightbulb_outline</i>
+                  <span>Give a Slice</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <i class="sidebar-icon material-icons">near_me</i>
+                  <span>Location</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <i class="sidebar-icon material-icons">&#xE56C;</i>
+                  <span>Resturants</span>
+              </a>
+          </li>
+          <li class="divider"></li>
+
+          <li>
+              <a href="#/pastslice">
+                  PAST SLICES
+                  <span class="sidebar-badge">3</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  TRASHED SLICES
+                  <span class="sidebar-badge">456</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  SLICES REVIEWED
+                  <span class="sidebar-badge badge-circle">i</span>
+              </a>
+          </li>
+      </ul>
+      <!-- Sidebar divider -->
+      <!-- <div class="sidebar-divider"></div> -->
+
+      <!-- Sidebar text -->
+      <!--  <div class="sidebar-text">Text</div> -->
+  </aside>
+  <div class="wrapperclass">
+  <div class="default-screen ionic-body">
+    <div class="content-wrapper">
+      <div class="padding"></div>
+      <div class="padding"></div>
+    </div>
+    <div class="headerinfo">
+    <div class="bar bar-header user-header bar-energized">
+  <a href="#/login">
+    <div class="h1 title" ng-if="vm.user.firstName">{{vm.user.firstName}} {{vm.user.lastName}}</div>
+    <div ng-show="!vm.user.firstName" class="h1 title">Please Login!</div>
+  </a>
+</div>
+</div>
+    <div class="list card">
+
+
+    <div class="bar bar-header bar-balanced">
+      <h1 class="title">{{ vm.slice }}</h1>
     </div>
 
-    <!-- Sidebar navigation -->
-    <ul class="nav sidebar-nav">
-        <li class="dropdown">
-            <ul id="settings-dropdown" class="dropdown-menu">
-                <li>
-                    <a href="#" tabindex="-1">
-                        Profile
-                    </a>
-                </li>
-                <li>
-                    <a href="#" tabindex="-1">
-                        Settings
-                    </a>
-                </li>
-                <li>
-                    <a href="#" tabindex="-1">
-                        Help
-                    </a>
-                </li>
-                <li>
-                    <a href="#" tabindex="-1">
-                        Exit
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#/">
-                <i class="sidebar-icon material-icons">home</i>
-                <span>Home</span>
-            </a>
-        </li>
-        <li>
-            <a href="./../pages/suggest.html">
-                <i class="sidebar-icon material-icons">lightbulb_outline</i>
-                <span>Give a Slice</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="sidebar-icon material-icons">near_me</i>
-                <span>Location</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="sidebar-icon material-icons">&#xE56C;</i>
-                <span>Resturants</span>
-            </a>
-        </li>
-        <li class="divider"></li>
-
-        <li>
-            <a href="#/pastslice">
-                PAST SLICES
-                <span class="sidebar-badge">3</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                TRASHED SLICES
-                <span class="sidebar-badge">456</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                SLICES REVIEWED
-                <span class="sidebar-badge badge-circle">i</span>
-            </a>
-        </li>
-    </ul>
-    <!-- Sidebar divider -->
-    <!-- <div class="sidebar-divider"></div> -->
-
-    <!-- Sidebar text -->
-    <!--  <div class="sidebar-text">Text</div> -->
-</aside>
-
-<div class="wrapperclass">
-    <!-- Sidebar Constructor -->
-    <div class="constructor">
-        <h2 class="headline">HERE IS YOUR SLICE</h2>
-
-        <h3 style="text-align:center;">How about CLUBBING?</h3>
-        <div class="row">
-        <div class="col span-1-of-1 slice-image">
-                    <img id="theImage" src="./../img/clubbing.jpg" onclick="pictureChange()">
-        </div>
-        <div class="take-me-button">
-        <a class="btn btn-orange btn-border-o" onclick="pictureChange()">
-          Take Me
-        </a>
-        </div>
-        </div>
-        <hr />
-        <h2 class="headline">Reviews</h2>
-        <div class="reviews">
-  <!-- Panel one -->
-  <div class="panel">
-    <img src="http://www.designbolts.com/wp-content/uploads/2014/01/Superman-Flat-Design.png">
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    </p>
-    <h7>Superman</h7>
+  <div class="item item-body">
+    <div class="slice-image">
+    <img class="" src="img/clubbing.jpg">
   </div>
-  <!-- Panel Two -->
-  <div class="panel">
-    <img src="http://www.designbolts.com/wp-content/uploads/2014/01/Batman-Flat-Design.png">
     <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+      the content is from a card-body consisting of an image and paragraph text. The footer
+      consists of tabs, icons aligned left, within the card-footer.
     </p>
-    <h7>Batman</h7>
-  </div>
-  <!-- Panel Three -->
-  <div class="panel">
-    <img src="http://www.designbolts.com/wp-content/uploads/2014/01/Liz-Sherman-Flat-Design.png">
     <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    </p>
-    <h7>Liz Sherman</h7>
-  </div>
+      <a ng-click="showDetails = ! showDetails">Show Reviews</a>
+        </p>
+    <div ng-hide="showme"></div>
+    <div class="reviews" ng-show="showDetails">
+<!-- Panel one -->
+<div class="panel">
+<img src="http://www.designbolts.com/wp-content/uploads/2014/01/Superman-Flat-Design.png">
+<p>
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+</p>
+<h7>Superman</h7>
 </div>
-<a class="btn btn-orange btn-border-o leave-a-review">
-          Leave a Review
-        </a>
+<!-- Panel Two -->
+<div class="panel">
+<img src="http://www.designbolts.com/wp-content/uploads/2014/01/Batman-Flat-Design.png">
+<p>
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+</p>
+<h7>Batman</h7>
+</div>
+<!-- Panel Three -->
+<div class="panel">
+<img src="http://www.designbolts.com/wp-content/uploads/2014/01/Liz-Sherman-Flat-Design.png">
+<p>
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+</p>
+<h7>Liz Sherman</h7>
+</div>
+</div>
 <script>
-  speed = 600
+speed = 600
 </script>
+  </div>
 
-
+</div>
+</div>
+</div>
+  <div class="bar bar-footer bar-dark">
+  <button class="button button-clear"><a href="#/">Home</a></button>
+  <div class="title">MANGO</div>
+  <button ng-click="callSlice()" class="button button-clear">New Slice</button>
+</div>
+</div>
     </div>
 </div>
 
-  <script src="./../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-    <script src="//code.angularjs.org/1.4.0/angular-cookies.js"></script>
-  <script src="./../js/location.js"></script>
-  <script src="./../js/review.js"></script>
-  <script src="./../js/sidebar.js"></script>
-  <script src="./../js/app.js"></script>
-  <script src="./../app-services/authentication.service.js"></script>
-  <script src="./../app-services/user.service.local-storage.js"></script>
-  <script src="./../app-services/flash.service.js"></script>
-  <script src="./../js/home.controller.js"></script>
-  <script src="./../js/login.controller.js"></script>
-  <script src="./../js/register.controller.js"></script>
 </body>
 
 </html>
