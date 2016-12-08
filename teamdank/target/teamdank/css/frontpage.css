@@ -27,6 +27,15 @@ body{
     visibility: hidden;
 }
 
+.mobile-nav-icon
+{
+  float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+    font-size: 50px;
+}
+
 /* ----------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ----------------------------------------------- */
@@ -411,10 +420,17 @@ display: block;
 .section-testimonials {
     background-size: cover;
     background-attachment: fixed;
+    background-color: #333333;
+}
+
+.section-testimonials h2
+{
+  color: white;
 }
 
 blockquote {
     padding: 10px 15px;
+    color: white;
 }
 
 cite {

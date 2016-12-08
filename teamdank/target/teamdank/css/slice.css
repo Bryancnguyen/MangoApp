@@ -28,10 +28,43 @@ body {
     visibility: hidden;
 }
 
+.headerinfo
+{
+  display: none;
+}
+.list:last-child.card
+{
+  margin-bottom: 100% !important;
+}
+.padding
+{
+  padding: 0px !important;
+}
+
 /* ----------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ----------------------------------------------- */
 
+.button:after
+{
+  position: relative !important;
+}
+
+.headerinfo .bar .title
+{
+  font-size: 20px;
+  margin: 10px 10px;
+}
+
+.list:last-child.card
+{
+      margin-top: 35px;
+}
+
+.user-header
+{
+  height: 60px !important;
+}
 
 .row {
     max-width: 1140px;
@@ -46,45 +79,11 @@ section {
     padding: 1%;
 }
 
-/* ----- HEADINGS ----- */
-h1,
-h2,
-h3 {
-    font-weight: 300;
-    text-transform: uppercase;
+
+body{
+  display: block !important;
 }
 
-h1 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 240%;
-    word-spacing: 4px;
-    letter-spacing: 1px;
-}
-
-h2 {
-    font-size: 180%;
-    word-spacing: 2px;
-    text-align: center;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
-
-h3 {
-    font-size: 110%;
-    margin-bottom: 15px;
-}
-
-h2:after {
-    display: block;
-    height: 2px;
-    background-color: #e67e22;
-    content: " ";
-    width: 100px;
-    margin: 0 auto;
-    margin-top: 30px;
-}
 
 /* ----- PARAGRAPHS ----- */
 .long-copy {
@@ -688,11 +687,12 @@ body {
 
 .slice-image img
 {
-    width: 50%;
-    display: block;
-    margin: auto;
+    width: 450px;
     border-radius: 5px;
     border: 5px solid #ddd;
+
+    margin: 50px auto;
+     display: block;
 }
 .slice-image img:hover
 {
@@ -700,7 +700,6 @@ body {
 }
 
 .reviews {
-  width : 600px;
   height : 150px;
   overflow : hidden ;
   background-color : #fff ;
@@ -739,8 +738,8 @@ png images background
 /*== Removal End==*/
 
 .panel p {
-  float : left ;
-  width : 420px;
+  width: 100%;
+
   clear : right ;
   text-align : justify ;
   margin : 25px 0 10px 0;

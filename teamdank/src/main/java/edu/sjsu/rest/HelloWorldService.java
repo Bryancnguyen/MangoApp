@@ -7,7 +7,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
 import edu.sjsu.db.Dao;
-@Path("/suggest")
+@Path("/hello")
 public class HelloWorldService {
 @GET
 @Path("/{param}")
