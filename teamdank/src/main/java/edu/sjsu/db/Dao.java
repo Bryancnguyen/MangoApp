@@ -22,22 +22,23 @@ public class Dao {
 		}
 	} // method
 
-        public static String getSlice(int idSlices) throws SQLException
+    public static String getSlice() throws SQLException
         {
-            String output = "{\"Slice\" : ";
+            String output = "";
 	    Connection conn = getConn();
 	    if (conn == null) return output + "\"connection failed\"}";
-	    String sqlStr = "select * from Slices where idSlices=?;";
+	    String sqlStr = "SELECT location FROM Slices ORDER BY RAND() LIMIT 1;";
 	    ResultSet rs = null;
-	    PreparedStatement pstmt = conn.prepareStatement(sqlStr); //pstmt.setString(1, idSlices);
+	    PreparedStatement pstmt = conn.prepareStatement(sqlStr);
+			//pstmt.setString();
 	    rs = pstmt.executeQuery();
 	    if (rs == null)
 	        output += "\"NO SLICES FOUND\"";
 	    else {
 	        rs.next();
-	        output += "\"" + rs.getString(2) + "\"";
+	        output += "\"" + rs.getString(1) + "\"";
 	    }
-	    return output + "}";
+	    return output;
         } // method
 
 

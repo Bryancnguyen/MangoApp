@@ -35,10 +35,10 @@ public Response getSlice()
 {
   String output = "";
   try {
-  output = Dao.getSlice(1);
+  output = Dao.getSlice();
 } catch (SQLException e) {
   e.printStackTrace();
-  output += "NO SLICES FOUND!!!";
+  output += "{\"slice\" : \"No Slices Found!\"}";
     }
   return Response.status(200).entity(output).build(); } //method
   } //class//class

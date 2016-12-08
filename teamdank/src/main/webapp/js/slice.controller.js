@@ -12,6 +12,7 @@ function SliceController(UserService, $rootScope, $scope, $http) {
   vm.allUsers = [];
   vm.deleteUser = deleteUser;
 
+
   initController();
 
   function initController() {
@@ -51,11 +52,11 @@ function SliceController(UserService, $rootScope, $scope, $http) {
   function errorCallback(response) { //error $scope.phone = 'An unknow problem happened.';
              });
        } //search
-var sliceUrl = 'http://localhost:8080/teamdank/rest/slice/';
+var sliceUrl = 'http://localhost:8080/teamdank/rest/hello/slice/';
      $scope.callSlice = function() {
      var request =
      { method: 'GET',
-     url: sliceUrl 
+     url: sliceUrl
      };
      $http(request).then(
      function successCallback(response) { //success
