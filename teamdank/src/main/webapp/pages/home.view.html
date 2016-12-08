@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<!--Header-->
+<head>
+  <meta charset="utf-8">
+  <title>Mango</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/frontpage.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<!---Body--->
+<body>
+<header>
+            <nav>
+                <div class="row">
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="#/login">Login</a></li>
+                        <li><a href="#/register">Register</a></li>
+                        <li><a href="#motto">Our Motto</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#how">How to Use</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+                  </div>
+            </nav>
+<div class="MangoTextTitle">
+<div class="jumbotron">
+  <h1>Mango</h1>
+</div>
+<div class="description-title">
+<h3>Bored and need something to do?</h3>
+</div>
+</div>
+<div class="MangoIconButton">
+
+<button type="submit">
+<a href="#/slice">
+<img src="img/mango-512.png" class="img-fluid" alt="Responsive image">
+</a>
+</button>
+</div>
+<div class="Think-link">
+
+<a href="pages/lucky.html" class="Lucky-Button btn btn-default btn-lg dropdown-toggle" type="button">
+    I'm Feeling Lucky!
+</a>
+</div>
+
+</header>
+
+
+<section class="main-quote" id="motto">
+            <div class="row">
+                <h2>Our Motto</h2>
+                <div class="quote-box">
+  <div class="quote-text">
+    <i class="material-icons" style="float:left; color:#fff; font-style: italic;">format_quote</i><span id="text"></span>
+  </div>
+  <div class="quote-author">
+    The only reason why we ask other people how their weekend was is so we can tell them about our weekend.<br />
+-Chuck Palahniuk, Invisible Monsters <span id="author"></span>
+  </div>
+                </div>
+            </div>
+</section>
+
+<section class="About">
+            <div class="row">
+                <h2>Don't Wonder &mdash; Find it</h2>
+                <p class="long-copy">
+                    Hello, we're Team Mango and we would like to introduce you to finding the best activity on any occasion!
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col span-1-of-4 box">
+                    <i class="material-icons large">access_time</i>
+                    <h3>Fast</h3>
+                    <p>
+                        We provide a quick and simple solution for finding something to do!
+                    </p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <i class="material-icons large">lightbulb_outline</i>
+                    <h3>Fun Ideas</h3>
+                    <p>
+                        We provide ideas based on popular ideas and remember the ones you like!
+                    </p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <i class="material-icons large">people</i>
+                    <h3>Hanging out</h3>
+                    <p>
+                        We make sure to focus on ensuring that you and your companions have the best weekend possible!
+                    </p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <i class="material-icons large">photo_camera</i>
+                    <h3>Instagram!?</h3>
+                    <p>
+                        Share with your friends and show them how awesome your weekend is!
+                    </p>
+                </div>
+            </div>
+</section>
+
+   <section class="section-testimonials" id="about">
+            <div class="row">
+                <h2>About us!</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-4">
+                    <blockquote>
+                        Hi I'm Bryan Nguyen, the Developer and Leader on this project! This weekend application has been one of the biggest projects I have gotten a privilege to be a part of. I hope that you guys will enjoy this application and all that it holds.
+                        <cite><img src="img/Bryan-1.jpg" alt="Dev 1 photo">Bryan Nguyen </cite>
+                    </blockquote>
+                </div>
+                <div class="col span-1-of-4">
+                    <blockquote>
+                       Hi I'm Jonathan Pak, the Full-Stack Developer and Leader on this project!
+                      The idea for the weekend app arose from constant scenarios of wondering how
+                      to exert my dominance over my friends in group activities when board games
+                      and table tennis were not an option. You don't have to dominate your friends
+                      to be a mango nerd, though!
+                        <cite><img src="img/Jonathan.jpg" alt="Dev 2 photo">Jonathan Pak</cite>
+                    </blockquote>
+                </div>
+                <div class="col span-1-of-4">
+                    <blockquote>
+Hi I'm Tri Ninh, the Back-End Engineer! Mango application has been one of the biggest projects I have gotten a privilege to be a part of. My team and I have put our hearts and soul in this product. I hope that you guys will find this application a helpful tool to plan your weekend.
+                    <cite><img src="img/Tri.jpg" alt="Dev 3 photo">Tri Ninh</cite>
+                    </blockquote>
+                </div>
+                <div class="col span-1-of-4">
+                    <blockquote>
+Hi I'm Joachim Lerman, the Developer Database Administrator and Architect! This weekend application has been one of my first web and ambitious projects I have worked on. I hope that you guys will enjoy this application. I don't go out so it is really hard for me to relate to our mango nerds.
+                    <cite><img src="img/Joachim.jpg" alt="Dev 3 photo">Joachim Lerman</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+
+<section class="section-steps" id="how">
+            <div class="row">
+                <h2>How it works &mdash; Simple as 1, 2, 3</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-2 steps-box">
+                    <div class="device iphone"></div>
+                </div>
+                <div class="col span-1-of-2 steps-box">
+                    <div class="works-step clearfix">
+                        <div>1</div>
+                        <p>Open the App and click the Mango for a Slice</p>
+                    </div>
+                    <div class="works-step clearfix">
+                        <div>2</div>
+                        <p>We provide you locations for where you can find slices</p>
+                    </div>
+                    <div class="works-step clearfix">
+                        <div>3</div>
+                        <p>Like the idea? Then share with friends!</p>
+                    </div>
+
+                    <a href="#" class="btn-app"><img src="img/download-app.svg" alt="App Store Button"></a>
+                    <a href="#" class="btn-app"><img src="img/download-app-android.png" alt="Play Store Button"></a>
+                </div>
+            </div>
+        </section>
+
+<!---Footer--->
+<footer>
+<div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">iOS App</a></li>
+                        <li><a href="#">Android App</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    Copyright &copy; MangoNERD . All rights reserved.
+                </p>
+            </div>
+</footer>
+
+<!----Scripts--->
+
+  <script src="js/devices.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

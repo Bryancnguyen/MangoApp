@@ -7,19 +7,24 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Dao {
-	public static Connection getConn() 
+	public static Connection getConn()
 	{
 		String driverStr = "com.mysql.jdbc.Driver";
 		String urlStr = "jdbc:mysql://localhost:3306/mydb"; String uid = "root";
+<<<<<<< HEAD
 		String pwd = "root";
+=======
+		String pwd = "teamdank160";
+>>>>>>> 1152744de86b04e87620a24a80649ac45133e5fd
 		try {
 		Class.forName(driverStr);
 		return DriverManager.getConnection(urlStr, uid, pwd);
-		} 
+		}
 		catch (SQLException | ClassNotFoundException ex) { System.err.println("The connection failed because " + ex.getMessage()); ex.printStackTrace();
 		return null;
 		}
 	} // method
+<<<<<<< HEAD
 	public static String getSlice(int idSlices) throws SQLException 
         { 
             String output = "{\"Slice\" : ";
@@ -113,5 +118,22 @@ public class Dao {
 	    return output + "}"; 
         } // method
 
+=======
+
+	public static String getPhone(String name) throws SQLException { String output = "{\"phone\" : ";
+	Connection conn = getConn();
+	if (conn == null) return output + "\"connection failed\"}";
+	String sqlStr = "select * from phones where name=?;";
+	ResultSet rs = null;
+	PreparedStatement pstmt = conn.prepareStatement(sqlStr); pstmt.setString(1, name);
+	rs = pstmt.executeQuery();
+	if (rs == null)
+	    output += "\"Name not found!\"";
+	else {
+	rs.next();
+	output += "\"" + rs.getString(2) + "\"";
+	}
+	return output + "}"; } // method
+>>>>>>> 1152744de86b04e87620a24a80649ac45133e5fd
 
 }

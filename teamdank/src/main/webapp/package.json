@@ -1,0 +1,31 @@
+{
+  "name": "mango",
+  "version": "1.0.0",
+  "description": "teamdank",
+  "main": "index.html",
+  "dependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "devDependencies": {
+    "browsersync": "0.0.1-security",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bryancnguyen/MangoApp.git"
+  },
+  "keywords": [
+    "mango"
+  ],
+  "author": "Bryan Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bryancnguyen/MangoApp/issues"
+  },
+  "homepage": "https://github.com/Bryancnguyen/MangoApp#readme"
+}
