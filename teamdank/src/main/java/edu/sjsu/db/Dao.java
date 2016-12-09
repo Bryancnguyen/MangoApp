@@ -27,7 +27,7 @@ public class Dao {
             String output = "";
 	    Connection conn = getConn();
 	    if (conn == null) return output + "\"connection failed\"}";
-	    String sqlStr = "SELECT location FROM Slices ORDER BY RAND() LIMIT 1;";
+	    String sqlStr = "SELECT ideas FROM Slices ORDER BY RAND() LIMIT 1;";
 	    ResultSet rs = null;
 	    PreparedStatement pstmt = conn.prepareStatement(sqlStr);
 			//pstmt.setString();

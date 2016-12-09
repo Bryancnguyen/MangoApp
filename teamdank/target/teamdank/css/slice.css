@@ -84,6 +84,12 @@ body{
   display: block !important;
 }
 
+.slice-image .btn
+{
+display: block !important;
+width: 200px !important;
+margin: 50px auto !important;
+}
 
 /* ----- PARAGRAPHS ----- */
 .long-copy {
@@ -689,7 +695,6 @@ body {
 {
     width: 450px;
     border-radius: 5px;
-    border: 5px solid #ddd;
 
     margin: 50px auto;
      display: block;

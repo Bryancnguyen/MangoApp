@@ -11,8 +11,7 @@ function SliceController(UserService, $rootScope, $scope, $http) {
   vm.user = null;
   vm.allUsers = [];
   vm.deleteUser = deleteUser;
-
-
+  $scope.sliceBoolean = false;
   initController();
 
   function initController() {
@@ -60,7 +59,40 @@ var sliceUrl = 'http://localhost:8080/teamdank/rest/hello/slice/';
      };
      $http(request).then(
      function successCallback(response) { //success
-     vm.slice = response.data;
+     vm.slice = response.data
+     vm.tempimagefilepath = ""
+     if(vm.slice === "Clubbing")
+     {
+      vm.tempimagefilepath = "img/clubbing.jpg"
+     }
+     else if(vm.slice === "Star Gazing")
+     {
+      vm.tempimagefilepath = "img/stargazing.jpg"
+     }
+     else if(vm.slice === "Bar Hopping")
+     {
+      vm.tempimagefilepath = "img/barhopping.jpg"
+     }
+     else if(vm.slice === "Amusement Park")
+     {
+      vm.tempimagefilepath = "img/amuse.jpg"
+     }
+     else if(vm.slice === "Museum")
+     {
+      vm.tempimagefilepath = "img/museum.jpg"
+     }
+     else if(vm.slice === "Bowling")
+     {
+      vm.tempimagefilepath = "img/bowling.jpg"
+     }
+     else if(vm.slice === "Netflix and Chill")
+     {
+      vm.tempimagefilepath = "img/netflix.gif"
+     }
+     else
+     {
+       vm.tempimagefilepath = "img/image-not-found.png"
+     }
      console.log(vm.slice)
      },
      function errorCallback(response) { //error $scope.phone = 'An unknow problem happened.';

@@ -81,19 +81,19 @@
               </a>
           </li>
           <li>
-              <a href="pages/suggest.html">
+              <a href="#/suggest">
                   <i class="sidebar-icon material-icons">lightbulb_outline</i>
                   <span>Give a Slice</span>
               </a>
           </li>
           <li>
-              <a href="#">
+              <a href="#/badurl">
                   <i class="sidebar-icon material-icons">near_me</i>
                   <span>Location</span>
               </a>
           </li>
           <li>
-              <a href="#">
+              <a href="#/badurl">
                   <i class="sidebar-icon material-icons">&#xE56C;</i>
                   <span>Resturants</span>
               </a>
@@ -145,10 +145,10 @@
     <div class="bar bar-header bar-balanced">
       <h1 class="title">{{ vm.slice }}</h1>
     </div>
-
   <div class="item item-body">
     <div class="slice-image">
-    <img class="" src="img/clubbing.jpg">
+      <img ng-src="{{vm.tempimagefilepath}}">
+      <a ng-click="sliceBoolean = !sliceBoolean; callSlice()" class="btn btn-primary btn-lg">Get a Slice</a>
   </div>
     <p>
       This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
@@ -196,7 +196,7 @@ speed = 600
   <div class="bar bar-footer bar-dark">
   <button class="button button-clear"><a href="#/">Home</a></button>
   <div class="title">MANGO</div>
-  <button ng-click="callSlice()" class="button button-clear">New Slice</button>
+  <button ng-click="sliceBoolean = !sliceBoolean;callSlice()" class="button button-clear">New Slice</button>
 </div>
 </div>
     </div>

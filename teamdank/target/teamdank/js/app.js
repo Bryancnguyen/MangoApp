@@ -10,6 +10,7 @@
     function config($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
+                controller: 'SliceController',
                 templateUrl: './pages/home.view.html',
                 controllerAs: 'vm'
             })
@@ -39,9 +40,12 @@
             .when('/pastslice',{
             templateUrl:'./pages/pastslice.html'
             })
+            .when('/suggest', {
+              templateUrl: './pages/suggest.html'
+            })
             .otherwise({
            controller : function(){
-           window.location.replace('/404.html');
+           window.location.replace('/404');
                 },
         templateUrl : './404.html'
                });
