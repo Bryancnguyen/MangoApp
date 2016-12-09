@@ -28,12 +28,12 @@ INSERT INTO Matching_criteria VALUES (6, 0, 2, 1, NULL);
 
 SELECT * FROM Matching_criteria;
 
-INSERT INTO Slices VALUES (0, 'San Jose', 0, 1, 3);
-INSERT INTO Slices VALUES (1, 'Great America', 0, 2, 3);
-INSERT INTO Slices VALUES (2, 'Tech Museum', 1, 1, 4);
+INSERT INTO Slices VALUES (0, 'Clubbing', 0, 1, 3);
+INSERT INTO Slices VALUES (1, 'Drinking', 0, 2, 3);
+INSERT INTO Slices VALUES (2, 'Eating Vegetarian food', 1, 1, 4);
 INSERT INTO Slices VALUES (3, 'San Jose Bar of Drinking Responsibly', 1, 1, 4);
-INSERT INTO Slices VALUES (4, 'Computer Science Museum', 0, 1, 3);
-INSERT INTO Slices VALUES (5, 'Silicon Valley Company Campus Tour', 0, 4, 5);
+INSERT INTO Slices VALUES (4, 'Bowling', 0, 1, 3);
+INSERT INTO Slices VALUES (5, 'Hanging out at Golden Gate Bridge', 0, 4, 5);
 INSERT INTO Slices VALUES (6, 'San Jose Night', 0, 4, 6);
 
 SELECT * FROM Slices;

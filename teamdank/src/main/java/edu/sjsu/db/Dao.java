@@ -117,10 +117,10 @@ public class Dao {
         } // method
 
 
-	public static String getPhone(String name) throws SQLException { String output = "{\"phone\" : ";
+	public static String getSummary() throws SQLException { String output = "{\"phone\" : ";
 	Connection conn = getConn();
 	if (conn == null) return output + "\"connection failed\"}";
-	String sqlStr = "select * from phones where name=?;";
+	String sqlStr = "select summary from reviews where review.idslices = slices.idslices";
 	ResultSet rs = null;
 	PreparedStatement pstmt = conn.prepareStatement(sqlStr); pstmt.setString(1, name);
 	rs = pstmt.executeQuery();
