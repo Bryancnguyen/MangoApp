@@ -38,11 +38,11 @@ INSERT INTO Slices VALUES (6, 'San Jose Night', 0, 4, 6);
 
 SELECT * FROM Slices;
 
-INSERT INTO Reviews VALUES (1, 1, "A terrible location", 3, 11);
-INSERT INTO Reviews VALUES (2, 3, "An alright location", 4, 12);
-INSERT INTO Reviews VALUES (3, 4, "A good location", 2, 5);
-INSERT INTO Reviews VALUES (4, 4, "A good location", 3, 7);
-INSERT INTO Reviews VALUES (5, 5, "A good location", 1, 4);
-INSERT INTO Reviews VALUES (6, 5, "A good location", 6, 1);
+INSERT INTO Reviews VALUES (1, 1, "A terrible idea", 3, 11);
+INSERT INTO Reviews VALUES (2, 3, "An alright idea", 4, 12);
+INSERT INTO Reviews VALUES (3, 4, "A good idea", 2, 5);
+INSERT INTO Reviews VALUES (4, 4, "A good idea", 3, 7);
+INSERT INTO Reviews VALUES (5, 5, "A good idea", 1, 4);
+INSERT INTO Reviews VALUES (6, 5, "A good idea", 6, 1);
 
 SELECT * FROM Reviews;
