@@ -28,21 +28,21 @@ INSERT INTO Matching_criteria VALUES (6, 0, 2, 1, NULL);
 
 SELECT * FROM Matching_criteria;
 
-INSERT INTO Slices VALUES (0, 'San Jose', 0, 1, 3);
-INSERT INTO Slices VALUES (1, 'Great America', 0, 2, 3);
-INSERT INTO Slices VALUES (2, 'Tech Museum', 1, 1, 4);
-INSERT INTO Slices VALUES (3, 'San Jose Bar of Drinking Responsibly', 1, 1, 4);
-INSERT INTO Slices VALUES (4, 'Computer Science Museum', 0, 1, 3);
-INSERT INTO Slices VALUES (5, 'Silicon Valley Company Campus Tour', 0, 4, 5);
-INSERT INTO Slices VALUES (6, 'San Jose Night', 0, 4, 6);
+INSERT INTO Slices VALUES (0, 'Clubbing', 0, 1, 3);
+INSERT INTO Slices VALUES (1, 'Amusement Park', 0, 2, 3);
+INSERT INTO Slices VALUES (2, 'Hikingm', 1, 1, 4);
+INSERT INTO Slices VALUES (3, 'Bar Crawl', 1, 1, 4);
+INSERT INTO Slices VALUES (4, 'Cycling', 0, 1, 3);
+INSERT INTO Slices VALUES (5, 'Bowling', 0, 4, 5);
+INSERT INTO Slices VALUES (6, 'Board Games', 0, 4, 6);
 
 SELECT * FROM Slices;
 
-INSERT INTO Reviews VALUES (1, 1, "A terrible location", 3, 11);
-INSERT INTO Reviews VALUES (2, 3, "An alright location", 4, 12);
-INSERT INTO Reviews VALUES (3, 4, "A good location", 2, 5);
-INSERT INTO Reviews VALUES (4, 4, "A good location", 3, 7);
-INSERT INTO Reviews VALUES (5, 5, "A good location", 1, 4);
-INSERT INTO Reviews VALUES (6, 5, "A good location", 6, 1);
+INSERT INTO Reviews VALUES (1, 1, "A terrible idea", 3, 11);
+INSERT INTO Reviews VALUES (2, 3, "An alright idea", 4, 12);
+INSERT INTO Reviews VALUES (3, 4, "A good idea", 2, 5);
+INSERT INTO Reviews VALUES (4, 4, "A good idea", 3, 7);
+INSERT INTO Reviews VALUES (5, 5, "A good idea", 1, 4);
+INSERT INTO Reviews VALUES (6, 5, "A good idea", 6, 1);
 
 SELECT * FROM Reviews;
