@@ -1,10 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `mydb` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `mydb`;
--- MySQL dump 10.13  Distrib 5.7.16, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.12, for osx10.9 (x86_64)
 --
--- Host: 127.0.0.1    Database: mydb
+-- Host: localhost    Database: mydb
 -- ------------------------------------------------------
--- Server version	5.7.16-0ubuntu0.16.10.1
+-- Server version	5.7.16
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -90,6 +88,7 @@ CREATE TABLE `Slices` (
   `Tourist` tinyint(1) DEFAULT NULL,
   `primary_criteria` int(11) DEFAULT NULL,
   `secondary_criteria` int(11) DEFAULT NULL,
+  `ideas` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idSlices`),
   KEY `fk_Slices_1_idx` (`primary_criteria`),
   KEY `fk_Slices_2_idx` (`secondary_criteria`),
@@ -104,7 +103,7 @@ CREATE TABLE `Slices` (
 
 LOCK TABLES `Slices` WRITE;
 /*!40000 ALTER TABLE `Slices` DISABLE KEYS */;
-INSERT INTO `Slices` VALUES (0,'San Jose',0,1,3),(1,'Great America',0,2,3),(2,'Tech Museum',1,1,4),(3,'San Jose Bar of Drinking Responsibly',1,1,4),(4,'Computer Science Museum',0,1,3),(5,'Silicon Valley Company Campus Tour',0,4,5),(6,'San Jose Night',0,4,6);
+INSERT INTO `Slices` VALUES (0,'San Jose',0,1,3,'Clubbing'),(1,'Great America',0,2,3,'Amusement Park'),(2,'Tech Museum',1,1,4,'Museum'),(3,'San Jose Bar of Drinking Responsibly',1,1,4,'Bar Hopping'),(4,'Computer Science Museum',0,1,3,'Star Gazing'),(5,'Silicon Valley Company Campus Tour',0,4,5,'Bowling'),(6,'San Jose Night',0,4,6,'Netflix and Chill');
 /*!40000 ALTER TABLE `Slices` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,4 +146,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-04 19:41:47
+-- Dump completed on 2016-12-13 20:16:49
